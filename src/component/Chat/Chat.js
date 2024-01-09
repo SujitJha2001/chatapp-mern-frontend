@@ -8,7 +8,7 @@ import CloseIcon from '../../images/closeIcon.png'
 // import { user } from "../Join/Join"
 import { useLocation,useNavigate } from 'react-router-dom';
 let socket;
-const ENDPOINT = "http://localhost:4000"
+const ENDPOINT = "https://chatapp-backend-0aiu.onrender.com/"
 
 
 const Chat = () => {
@@ -30,7 +30,7 @@ const Chat = () => {
     }
     console.log(messages)
     useEffect(() => {
-        fetch("http://localhost:4000/").then((res)=>console.log(res.text())).catch((err)=>console.log(err))
+        fetch("https://chatapp-backend-0aiu.onrender.com/").then((res)=>console.log(res.text())).catch((err)=>console.log(err))
         // socket = SocketIO(ENDPOINT, { transports: ["websocket"] });
         socket = SocketIO(ENDPOINT);
 
